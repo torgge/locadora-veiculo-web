@@ -2,6 +2,7 @@ package com.algaworks.curso.jpa2.dao;
 
 import com.algaworks.curso.jpa2.modelo.Fabricante;
 import com.algaworks.curso.jpa2.service.NegocioException;
+import com.algaworks.curso.jpa2.util.jpa.Transactional;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
@@ -17,16 +18,21 @@ public class FabricanteDAO implements Serializable {
     private EntityManager em;
 
     public void salvar(Fabricante fabricante){
-        em.persist(fabricante);
+        em.merge(fabricante);
     }
 
+    @Transactional
     public void excluir(Fabricante fabricante) throws NegocioException {
-        em.find(Fabricante.class, fabricante.getCodigo());
+        fabricante = em.find(Fabricante.class, fabricante.getCodigo());
         em.remove(fabricante);
         em.flush();
     }
 
     public List<Fabricante> buscarTodos() {
         return em.createQuery("from Fabricante").getResultList();
+    }
+
+    public Fabricante buscarPeloCodigo(Long codigo) {
+        return em.find(Fabricante.class, codigo);
     }
 }
