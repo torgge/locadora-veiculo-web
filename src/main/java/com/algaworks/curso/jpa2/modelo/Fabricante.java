@@ -29,4 +29,19 @@ public class Fabricante {
         this.nome = nome;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Fabricante)) return false;
+
+        Fabricante that = (Fabricante) o;
+
+        return getCodigo().equals(that.getCodigo());
+
+    }
+
+    @Override
+    public int hashCode() {
+        return getCodigo().hashCode();
+    }
 }
