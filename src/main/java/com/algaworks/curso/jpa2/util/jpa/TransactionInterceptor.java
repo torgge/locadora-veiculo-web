@@ -1,13 +1,12 @@
 package com.algaworks.curso.jpa2.util.jpa;
 
-import java.io.Serializable;
-
 import javax.inject.Inject;
 import javax.interceptor.AroundInvoke;
 import javax.interceptor.Interceptor;
 import javax.interceptor.InvocationContext;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import java.io.Serializable;
 
 @Interceptor
 @Transactional

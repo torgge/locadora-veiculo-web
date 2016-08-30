@@ -28,10 +28,10 @@ public class CadastroModeloCarroBean implements Serializable {
     private List<Fabricante> fabricantes;
 
     @Inject
-    private CadastroModeloCarroService cadastroModeloCarroService;
+    transient private CadastroModeloCarroService cadastroModeloCarroService;
 
     @Inject
-    private FabricanteDAO fabricanteDAO;
+    transient private FabricanteDAO fabricanteDAO;
 
     public void salvar(){
         try {
