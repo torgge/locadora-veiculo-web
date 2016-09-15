@@ -11,10 +11,6 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 
-/**
- * Created by George on 08/08/2016.
- */
-
 @Named
 @ViewScoped
 public class CadastroFabricanteBean implements Serializable {
@@ -24,10 +20,11 @@ public class CadastroFabricanteBean implements Serializable {
 
     private Fabricante fabricante;
 
-    public void salvar(){
+    public void salvar() {
         try {
             this.cadastroFabricanteService.salvar(fabricante);
             FacesUtil.addSuccessMessage("Fabricante salvo com sucesso!");
+
             this.limpar();
         } catch (NegocioException e) {
             FacesUtil.addErrorMessage(e.getMessage());
@@ -35,11 +32,11 @@ public class CadastroFabricanteBean implements Serializable {
     }
 
     @PostConstruct
-    public void init(){
+    public void init() {
         this.limpar();
     }
 
-    private void limpar() {
+    public void limpar() {
         this.fabricante = new Fabricante();
     }
 
@@ -50,4 +47,6 @@ public class CadastroFabricanteBean implements Serializable {
     public void setFabricante(Fabricante fabricante) {
         this.fabricante = fabricante;
     }
+
+
 }

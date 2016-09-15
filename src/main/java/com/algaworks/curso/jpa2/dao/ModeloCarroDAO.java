@@ -6,32 +6,36 @@ import com.algaworks.curso.jpa2.util.jpa.Transactional;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceException;
+import java.io.Serializable;
 import java.util.List;
 
-/**
- * Created by George on 22/08/2016.
- */
-public class ModeloCarroDAO {
+public class ModeloCarroDAO implements Serializable {
 
     @Inject
-    private EntityManager em;
+    private EntityManager manager;
 
-    public void salvar(ModeloCarro modeloCarro){
-        em.merge(modeloCarro);
+    public ModeloCarro buscarPeloCodigo(Long codigo) {
+        return manager.find(ModeloCarro.class, codigo);
+    }
+
+    public void salvar(ModeloCarro modeloCarro) {
+        manager.merge(modeloCarro);
+    }
+
+    public List<ModeloCarro> buscarTodos() {
+        return manager.createQuery("from ModeloCarro").getResultList();
     }
 
     @Transactional
     public void excluir(ModeloCarro modeloCarro) throws NegocioException {
-        modeloCarro = em.find(ModeloCarro.class, modeloCarro.getCodigo());
-        em.remove(modeloCarro);
-        em.flush();
+        modeloCarro = buscarPeloCodigo(modeloCarro.getCodigo());
+        try {
+            manager.remove(modeloCarro);
+            manager.flush();
+        } catch (PersistenceException e) {
+            throw new NegocioException("Este modelo não pode ser excluído.");
+        }
     }
 
-    public List<ModeloCarro> buscarTodos() {
-        return em.createQuery("from ModeloCarro").getResultList();
-    }
-
-    public ModeloCarro buscarPeloCodigo(Long codigo) {
-        return em.find(ModeloCarro.class, codigo);
-    }
 }

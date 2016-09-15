@@ -14,26 +14,23 @@ import javax.inject.Named;
 import java.io.Serializable;
 import java.util.List;
 
-/**
- * Created by George on 22/08/2016.
- */
 @Named
 @ViewScoped
 public class CadastroModeloCarroBean implements Serializable {
 
-    private static final Long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
     private ModeloCarro modeloCarro;
 
     private List<Fabricante> fabricantes;
 
     @Inject
-    transient private CadastroModeloCarroService cadastroModeloCarroService;
+    private CadastroModeloCarroService cadastroModeloCarroService;
 
     @Inject
-    transient private FabricanteDAO fabricanteDAO;
+    private FabricanteDAO fabricanteDAO;
 
-    public void salvar(){
+    public void salvar() {
         try {
             this.cadastroModeloCarroService.salvar(modeloCarro);
             FacesUtil.addSuccessMessage("Modelo carro salvo com sucesso!");
@@ -45,7 +42,7 @@ public class CadastroModeloCarroBean implements Serializable {
     }
 
     @PostConstruct
-    public void Inicializar(){
+    public void inicializar() {
         this.limpar();
         this.fabricantes = fabricanteDAO.buscarTodos();
     }
@@ -57,6 +54,7 @@ public class CadastroModeloCarroBean implements Serializable {
     public ModeloCarro getModeloCarro() {
         return modeloCarro;
     }
+
     public void setModeloCarro(ModeloCarro modeloCarro) {
         this.modeloCarro = modeloCarro;
     }
@@ -64,6 +62,5 @@ public class CadastroModeloCarroBean implements Serializable {
     public List<Fabricante> getFabricantes() {
         return fabricantes;
     }
-
 
 }

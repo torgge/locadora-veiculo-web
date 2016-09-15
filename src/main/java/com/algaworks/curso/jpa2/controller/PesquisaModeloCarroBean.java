@@ -1,30 +1,26 @@
 package com.algaworks.curso.jpa2.controller;
 
-import java.io.Serializable;
-import java.util.List;
+import com.algaworks.curso.jpa2.dao.ModeloCarroDAO;
+import com.algaworks.curso.jpa2.modelo.ModeloCarro;
+import com.algaworks.curso.jpa2.service.NegocioException;
+import com.algaworks.curso.jpa2.util.jsf.FacesUtil;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-
-import com.algaworks.curso.jpa2.dao.ModeloCarroDAO;
-import com.algaworks.curso.jpa2.modelo.ModeloCarro;
-import com.algaworks.curso.jpa2.service.NegocioException;
-import com.algaworks.curso.jpa2.util.jsf.FacesUtil;
+import java.io.Serializable;
+import java.util.List;
 
 @Named
 @ViewScoped
 public class PesquisaModeloCarroBean implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
-	private List<ModeloCarro> modelosCarro;
-	
+    @Inject
+    ModeloCarroDAO modeloCarroDAO;
+    private List<ModeloCarro> modelosCarro;
 	private ModeloCarro modeloCarroSelecionado;
-	
-	@Inject
-	transient ModeloCarroDAO modeloCarroDAO;
 
 	public List<ModeloCarro> getModelosCarro() {
 		return modelosCarro;

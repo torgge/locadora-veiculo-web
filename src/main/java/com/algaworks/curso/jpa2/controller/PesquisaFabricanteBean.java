@@ -38,7 +38,6 @@ public class PesquisaFabricanteBean implements Serializable {
         } catch (NegocioException e) {
             FacesUtil.addErrorMessage(e.getMessage());
         }
-        this.inicializar();
     }
 
     public Fabricante getFabricanteSelecionado() {
@@ -47,7 +46,6 @@ public class PesquisaFabricanteBean implements Serializable {
 
     public void setFabricanteSelecionado(Fabricante fabricanteSelecionado) {
         this.fabricanteSelecionado = fabricanteSelecionado;
-        this.inicializar();
     }
 
     @PostConstruct

@@ -1,12 +1,11 @@
 package com.algaworks.curso.jpa2.service;
 
-import java.io.Serializable;
-
-import javax.inject.Inject;
-
 import com.algaworks.curso.jpa2.dao.CarroDAO;
 import com.algaworks.curso.jpa2.modelo.Carro;
 import com.algaworks.curso.jpa2.util.jpa.Transactional;
+
+import javax.inject.Inject;
+import java.io.Serializable;
 
 public class CadastroCarroService implements Serializable {
 

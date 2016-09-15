@@ -1,18 +1,17 @@
 package com.algaworks.curso.jpa2.controller;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
+import com.algaworks.curso.jpa2.dao.AcessorioDAO;
+import com.algaworks.curso.jpa2.modelo.Acessorio;
+import com.algaworks.curso.jpa2.service.NegocioException;
+import com.algaworks.curso.jpa2.util.jsf.FacesUtil;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-
-import com.algaworks.curso.jpa2.dao.AcessorioDAO;
-import com.algaworks.curso.jpa2.modelo.Acessorio;
-import com.algaworks.curso.jpa2.service.NegocioException;
-import com.algaworks.curso.jpa2.util.jsf.FacesUtil;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Named
 @ViewScoped

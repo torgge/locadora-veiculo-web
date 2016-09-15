@@ -1,12 +1,11 @@
 package com.algaworks.curso.jpa2.service;
 
-import java.io.Serializable;
-
-import javax.inject.Inject;
-
 import com.algaworks.curso.jpa2.dao.AcessorioDAO;
 import com.algaworks.curso.jpa2.modelo.Acessorio;
 import com.algaworks.curso.jpa2.util.jpa.Transactional;
+
+import javax.inject.Inject;
+import java.io.Serializable;
 
 public class CadastroAcessorioService implements Serializable {
 

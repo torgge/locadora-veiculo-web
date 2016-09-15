@@ -1,15 +1,15 @@
 package com.algaworks.curso.jpa2.converter;
 
+import com.algaworks.curso.jpa2.dao.AcessorioDAO;
+import com.algaworks.curso.jpa2.modelo.Acessorio;
+import com.algaworks.curso.jpa2.util.cdi.CDIServiceLocator;
+
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
 
-import com.algaworks.curso.jpa2.dao.AcessorioDAO;
-import com.algaworks.curso.jpa2.modelo.Acessorio;
-import com.algaworks.curso.jpa2.util.cdi.CDIServiceLocator;
-
-@FacesConverter("acessorioConverter")
+@FacesConverter(forClass = Acessorio.class)
 public class AcessorioConverter implements Converter {
 
 	private AcessorioDAO acessorioDAO;

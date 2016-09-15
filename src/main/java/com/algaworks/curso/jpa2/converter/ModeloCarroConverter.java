@@ -1,13 +1,13 @@
 package com.algaworks.curso.jpa2.converter;
 
+import com.algaworks.curso.jpa2.dao.ModeloCarroDAO;
+import com.algaworks.curso.jpa2.modelo.ModeloCarro;
+import com.algaworks.curso.jpa2.util.cdi.CDIServiceLocator;
+
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
-
-import com.algaworks.curso.jpa2.dao.ModeloCarroDAO;
-import com.algaworks.curso.jpa2.modelo.ModeloCarro;
-import com.algaworks.curso.jpa2.util.cdi.CDIServiceLocator;
 
 @FacesConverter(forClass=ModeloCarro.class)
 public class ModeloCarroConverter implements Converter {

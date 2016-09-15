@@ -5,25 +5,25 @@ import com.algaworks.curso.jpa2.modelo.ModeloCarro;
 import com.algaworks.curso.jpa2.util.jpa.Transactional;
 
 import javax.inject.Inject;
+import java.io.Serializable;
 
-/**
- * Created by George on 22/08/2016.
- */
-public class CadastroModeloCarroService {
+public class CadastroModeloCarroService implements Serializable {
 
     @Inject
-    private ModeloCarroDAO modeloCarroDAO;
+    ModeloCarroDAO modeloCarroDAO;
 
     @Transactional
-    public void salvar(ModeloCarro modeloCarro) throws NegocioException{
-        if (modeloCarro.getDescricao() == null || modeloCarro.getDescricao().trim().equals("")){
-            throw new NegocioException("O nome do fabricante é obrigatório.");
+    public void salvar(ModeloCarro modeloCarro) throws NegocioException {
+        if (modeloCarro.getDescricao() == null || modeloCarro.getDescricao().trim().equals("")) {
+            throw new NegocioException("O nome do modelo é obrigatório.");
         }
 
-        if (modeloCarro.getFabricante() == null){
-            throw new NegocioException("O fabricante é obrigatório.");
+        if (modeloCarro.getFabricante() == null) {
+            throw new NegocioException("O fabricante e obrigatório");
         }
 
         this.modeloCarroDAO.salvar(modeloCarro);
     }
+
+
 }

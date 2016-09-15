@@ -1,15 +1,14 @@
 package com.algaworks.curso.jpa2.dao;
 
-import java.io.Serializable;
-import java.util.List;
+import com.algaworks.curso.jpa2.modelo.Acessorio;
+import com.algaworks.curso.jpa2.service.NegocioException;
+import com.algaworks.curso.jpa2.util.jpa.Transactional;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceException;
-
-import com.algaworks.curso.jpa2.modelo.Acessorio;
-import com.algaworks.curso.jpa2.service.NegocioException;
-import com.algaworks.curso.jpa2.util.jpa.Transactional;
+import java.io.Serializable;
+import java.util.List;
 
 public class AcessorioDAO implements Serializable {
 
