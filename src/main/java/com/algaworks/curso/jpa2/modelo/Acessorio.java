@@ -6,11 +6,11 @@ import javax.persistence.*;
 @SequenceGenerator(name = "SEQ_ACESSORIO", sequenceName = "SEQ_ACESSORIO", initialValue = 1)
 public class Acessorio {
 
-	private Long codigo;
-	private String descricao;
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "SEQ_ACESSORIO")
+	private Long codigo;
+	private String descricao;
+
 	public Long getCodigo() {
 		return codigo;
 	}

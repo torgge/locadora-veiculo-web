@@ -21,7 +21,7 @@ public class CDIServiceLocator {
 	@SuppressWarnings("unchecked")
 	public static <T> T getBean(Class<T> clazz) {
 		BeanManager bm = getBeanManager();
-		Set<Bean<?>> beans = (Set<Bean<?>>) bm.getBeans(clazz);
+        Set<Bean<?>> beans = bm.getBeans(clazz);
 
 		if (beans == null || beans.isEmpty()) {
 			return null;

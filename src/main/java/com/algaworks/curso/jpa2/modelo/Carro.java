@@ -1,24 +1,27 @@
 package com.algaworks.curso.jpa2.modelo;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.List;
-
-import javax.persistence.*;
 
 @Entity
 @SequenceGenerator(name = "SEQ_CARRO", sequenceName = "SEQ_CARRO", initialValue = 1)
 public class Carro {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "SEQ_CARRO")
 	private Long codigo;
 	private String placa;
 	private String cor;
 	private String chassi;
 	private BigDecimal valorDiaria;
+	@ManyToOne
+	@JoinColumn(name = "codigo_modelo")
 	private ModeloCarro modelo;
+	@ManyToMany
 	private List<Acessorio> acessorios;
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO, generator = "SEQ_CARRO")
+
+
 	public Long getCodigo() {
 		return codigo;
 	}
@@ -53,24 +56,21 @@ public class Carro {
 	public void setValorDiaria(BigDecimal valorDiaria) {
 		this.valorDiaria = valorDiaria;
 	}
-	
-	@ManyToOne
-	@JoinColumn(name="codigo_modelo")
+
 	public ModeloCarro getModelo() {
 		return modelo;
 	}
 	public void setModelo(ModeloCarro modelo) {
 		this.modelo = modelo;
 	}
-	
-	@ManyToMany
+
 	public List<Acessorio> getAcessorios() {
 		return acessorios;
 	}
 	public void setAcessorios(List<Acessorio> acessorios) {
 		this.acessorios = acessorios;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -78,7 +78,7 @@ public class Carro {
 		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
 		return result;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

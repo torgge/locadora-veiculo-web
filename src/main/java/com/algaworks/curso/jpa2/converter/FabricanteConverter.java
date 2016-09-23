@@ -14,11 +14,11 @@ public class FabricanteConverter implements Converter {
 
 	private FabricanteDAO fabricanteDAO;
 
-	public FabricanteConverter() {
+    public FabricanteConverter() {
 		this.fabricanteDAO = CDIServiceLocator.getBean(FabricanteDAO.class);
 	}
 
-	@Override
+    @Override
 	public Object getAsObject(FacesContext context, UIComponent component, String value) {
 		Fabricante retorno = null;
 
@@ -35,10 +35,10 @@ public class FabricanteConverter implements Converter {
 			Long codigo = ((Fabricante) value).getCodigo();
 			String retorno = (codigo == null ? null : codigo.toString());
 
-			return retorno;
+            return retorno;
 		}
 
-		return "";
+        return "";
 	}
 
 }

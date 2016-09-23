@@ -12,30 +12,30 @@ import java.util.List;
 
 public class ModeloCarroDAO implements Serializable {
 
-    @Inject
-    private EntityManager manager;
+	@Inject
+	private EntityManager manager;
 
-    public ModeloCarro buscarPeloCodigo(Long codigo) {
-        return manager.find(ModeloCarro.class, codigo);
-    }
+	public ModeloCarro buscarPeloCodigo(Long codigo) {
+		return manager.find(ModeloCarro.class, codigo);
+	}
 
-    public void salvar(ModeloCarro modeloCarro) {
-        manager.merge(modeloCarro);
-    }
+	public void salvar(ModeloCarro modeloCarro) {
+		manager.merge(modeloCarro);
+	}
 
-    public List<ModeloCarro> buscarTodos() {
-        return manager.createQuery("from ModeloCarro").getResultList();
-    }
+	public List<ModeloCarro> buscarTodos() {
+		return manager.createQuery("from ModeloCarro").getResultList();
+	}
 
-    @Transactional
-    public void excluir(ModeloCarro modeloCarro) throws NegocioException {
-        modeloCarro = buscarPeloCodigo(modeloCarro.getCodigo());
-        try {
-            manager.remove(modeloCarro);
-            manager.flush();
-        } catch (PersistenceException e) {
-            throw new NegocioException("Este modelo não pode ser excluído.");
-        }
-    }
-
+	@Transactional
+	public void excluir(ModeloCarro modeloCarro) throws NegocioException {
+		modeloCarro = buscarPeloCodigo(modeloCarro.getCodigo());
+		try {
+			manager.remove(modeloCarro);
+			manager.flush();
+		} catch (PersistenceException e) {
+			throw new NegocioException("Este modelo não pode ser excluído.");
+		}
+	}
+	
 }

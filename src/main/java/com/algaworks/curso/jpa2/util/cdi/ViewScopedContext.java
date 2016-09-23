@@ -20,7 +20,11 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author Steve Taylor
  */
 public class ViewScopedContext implements Context, SystemEventListener {
-	
+
+    private final static String COMPONENT_MAP_NAME = "org.jboss.seam.faces.viewscope.componentInstanceMap";
+    private final static String CREATIONAL_MAP_NAME = "org.jboss.seam.faces.viewscope.creationalInstanceMap";
+    private boolean isJsfSubscribed = false;
+
 	@SuppressWarnings("unchecked")
 	@Override
 	public <T> T get(final Contextual<T> component) {
@@ -81,21 +85,18 @@ public class ViewScopedContext implements Context, SystemEventListener {
 
 	@Override
 	public boolean isListenerForSource(final Object source) {
-		if (source instanceof UIViewRoot) {
-			return true;
-		}
+        return source instanceof UIViewRoot;
 
-		return false;
-	}
+    }
 
 	/**
 	 * We get PreDestroyViewMapEvent events from the JSF servlet and destroy our
 	 * contextual instances. This should (theoretically!) also get fired if the
 	 * webapp closes, so there should be no need to manually track all view
 	 * scopes and destroy them at a shutdown.
-	 * 
-	 * @see javax.faces.event.SystemEventListener#processEvent(javax.faces.event.SystemEvent)
-	 */
+     *
+     * @see SystemEventListener#processEvent(SystemEvent)
+     */
 	@Override
 	public void processEvent(final SystemEvent event) {
 		if (event instanceof PreDestroyViewMapEvent) {
@@ -164,10 +165,4 @@ public class ViewScopedContext implements Context, SystemEventListener {
 
 		return map;
 	}
-
-	private final static String COMPONENT_MAP_NAME = "org.jboss.seam.faces.viewscope.componentInstanceMap";
-
-	private final static String CREATIONAL_MAP_NAME = "org.jboss.seam.faces.viewscope.creationalInstanceMap";
-
-	private boolean isJsfSubscribed = false;
 }

@@ -39,4 +39,20 @@ public class ModeloCarro {
     public void setFabricante(Fabricante fabricante) {
         this.fabricante = fabricante;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ModeloCarro)) return false;
+
+        ModeloCarro that = (ModeloCarro) o;
+
+        return getCodigo().equals(that.getCodigo());
+
+    }
+
+    @Override
+    public int hashCode() {
+        return getCodigo().hashCode();
+    }
 }

@@ -20,7 +20,7 @@ public class PesquisaModeloCarroBean implements Serializable {
     @Inject
     ModeloCarroDAO modeloCarroDAO;
     private List<ModeloCarro> modelosCarro;
-	private ModeloCarro modeloCarroSelecionado;
+    private ModeloCarro modeloCarroSelecionado;
 
 	public List<ModeloCarro> getModelosCarro() {
 		return modelosCarro;
