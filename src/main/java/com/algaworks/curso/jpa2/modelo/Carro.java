@@ -20,7 +20,8 @@ public class Carro {
 	private ModeloCarro modelo;
 	@ManyToMany
 	private List<Acessorio> acessorios;
-
+	@OneToMany(mappedBy = "carro")
+	private List<Aluguel> alugueis;
 
 	public Long getCodigo() {
 		return codigo;
@@ -69,6 +70,14 @@ public class Carro {
 	}
 	public void setAcessorios(List<Acessorio> acessorios) {
 		this.acessorios = acessorios;
+	}
+
+	public List<Aluguel> getAlugueis() {
+		return alugueis;
+	}
+
+	public void setAlugueis(List<Aluguel> alugueis) {
+		this.alugueis = alugueis;
 	}
 
 	@Override

@@ -1,28 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5260edf1-70b1-49f6-837a-c0cb704e3595" name="Default" comment="Curso JAVA - JPA - Aula: Relacionamento Muitos para Muitos.&#10;Corrigido Hashcode e Equals do model ModeloCarro.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/controller/NovoAluguelBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/converter/CarroConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/dao/AluguelDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/dao/ApoliceSeguroDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/modelo/Aluguel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/modelo/ApoliceSeguro.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/service/CadastroAluguelService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/aluguel/NovoAluguel.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/algaworks/curso/jpa2/controller/CadastroFabricanteBean.class" afterPath="$PROJECT_DIR$/target/classes/com/algaworks/curso/jpa2/controller/CadastroFabricanteBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/algaworks/curso/jpa2/dao/FabricanteDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/algaworks/curso/jpa2/dao/FabricanteDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/algaworks/curso/jpa2/service/CadastroFabricanteService.class" afterPath="$PROJECT_DIR$/target/classes/com/algaworks/curso/jpa2/service/CadastroFabricanteService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/algaworks/curso/jpa2/util/cdi/CDIServiceLocator.class" afterPath="$PROJECT_DIR$/target/classes/com/algaworks/curso/jpa2/util/cdi/CDIServiceLocator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/algaworks/curso/jpa2/util/cdi/ViewScopedContext.class" afterPath="$PROJECT_DIR$/target/classes/com/algaworks/curso/jpa2/util/cdi/ViewScopedContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/algaworks/curso/jpa2/util/jpa/TransactionInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/com/algaworks/curso/jpa2/util/jpa/TransactionInterceptor.class" />
+    <list default="true" id="5260edf1-70b1-49f6-837a-c0cb704e3595" name="Default" comment="Curso JAVA - JPA - Aula: Relacionamento Um para Um.&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/controller/PesquisaCarroBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/carro/PesquisaCarros.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/locadora-veiculo-web.war" afterPath="$PROJECT_DIR$/target/locadora-veiculo-web.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/locadora-veiculo-web/WEB-INF/classes/com/algaworks/curso/jpa2/controller/CadastroFabricanteBean.class" afterPath="$PROJECT_DIR$/target/locadora-veiculo-web/WEB-INF/classes/com/algaworks/curso/jpa2/controller/CadastroFabricanteBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/locadora-veiculo-web/WEB-INF/classes/com/algaworks/curso/jpa2/dao/FabricanteDAO.class" afterPath="$PROJECT_DIR$/target/locadora-veiculo-web/WEB-INF/classes/com/algaworks/curso/jpa2/dao/FabricanteDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/locadora-veiculo-web/WEB-INF/classes/com/algaworks/curso/jpa2/service/CadastroFabricanteService.class" afterPath="$PROJECT_DIR$/target/locadora-veiculo-web/WEB-INF/classes/com/algaworks/curso/jpa2/service/CadastroFabricanteService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/locadora-veiculo-web/WEB-INF/classes/com/algaworks/curso/jpa2/util/cdi/CDIServiceLocator.class" afterPath="$PROJECT_DIR$/target/locadora-veiculo-web/WEB-INF/classes/com/algaworks/curso/jpa2/util/cdi/CDIServiceLocator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/locadora-veiculo-web/WEB-INF/classes/com/algaworks/curso/jpa2/util/cdi/ViewScopedContext.class" afterPath="$PROJECT_DIR$/target/locadora-veiculo-web/WEB-INF/classes/com/algaworks/curso/jpa2/util/cdi/ViewScopedContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/locadora-veiculo-web/WEB-INF/classes/com/algaworks/curso/jpa2/util/jpa/TransactionInterceptor.class" afterPath="$PROJECT_DIR$/target/locadora-veiculo-web/WEB-INF/classes/com/algaworks/curso/jpa2/util/jpa/TransactionInterceptor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/modelo/Carro.java" afterPath="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/modelo/Carro.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/template/LayoutPadrao.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/template/LayoutPadrao.xhtml" />
@@ -98,14 +80,14 @@
         <option value="$PROJECT_DIR$/src/main/webapp/carro/CadastroCarro.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/service/CadastroCarroService.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/template/LayoutPadrao.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/dao/ApoliceSeguroDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/controller/NovoAluguelBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/modelo/ApoliceSeguro.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/modelo/Aluguel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/modelo/Carro.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/dao/AluguelDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/service/CadastroAluguelService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/modelo/Carro.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/template/LayoutPadrao.xhtml" />
       </list>
     </option>
   </component>
@@ -265,6 +247,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="locadora-veiculo-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="locadora-veiculo-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="carro" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -505,11 +513,11 @@
       <recent name="com.algaworks.curso.jpa2.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\torgg\Documents\GitProjects\locadora-veiculo-web\src\main\java\com\algaworks\curso\jpa2\service" />
       <recent name="C:\Users\torgg\Documents\GitProjects\locadora-veiculo-web\src\main\java\com\algaworks\curso\jpa2\controller" />
+      <recent name="C:\Users\torgg\Documents\GitProjects\locadora-veiculo-web\src\main\webapp\carro" />
+      <recent name="C:\Users\torgg\Documents\GitProjects\locadora-veiculo-web\src\main\java\com\algaworks\curso\jpa2\service" />
       <recent name="C:\Users\torgg\Documents\GitProjects\locadora-veiculo-web\src\main\java\com\algaworks\curso\jpa2\converter" />
       <recent name="C:\Users\torgg\Documents\GitProjects\locadora-veiculo-web\src\main\webapp" />
-      <recent name="C:\Users\torgg\Documents\GitProjects\locadora-veiculo-web\src\main\java\com\algaworks\curso\jpa2\util" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\torgg\Documents\GitProjects\locadora-veiculo-web\src\main\java\com\algaworks\curso\jpa2\controller" />
@@ -1058,7 +1066,7 @@
       <workItem from="1474642957241" duration="519000" />
       <workItem from="1474659090257" duration="2876000" />
       <workItem from="1474908078097" duration="5563000" />
-      <workItem from="1474979737407" duration="4787000" />
+      <workItem from="1474979737407" duration="7453000" />
     </task>
     <task id="LOCAL-00001" summary="Curso JAVA - JPA">
       <created>1470874781013</created>
@@ -1109,11 +1117,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474661924460</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Curso JAVA - JPA - Aula: Relacionamento Um para Um.&#10;">
+      <created>1474992272480</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1474992272480</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64682000" />
+    <option name="totallyTimeSpent" value="67348000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -1190,7 +1205,8 @@
     <MESSAGE value="Curso JAVA - JPA - Aula: implementando Modelo Carro." />
     <MESSAGE value="Curso JAVA - JPA - Aula: Relacionamento Muitos para Muitos." />
     <MESSAGE value="Curso JAVA - JPA - Aula: Relacionamento Muitos para Muitos.&#10;Corrigido Hashcode e Equals do model ModeloCarro." />
-    <option name="LAST_COMMIT_MESSAGE" value="Curso JAVA - JPA - Aula: Relacionamento Muitos para Muitos.&#10;Corrigido Hashcode e Equals do model ModeloCarro." />
+    <MESSAGE value="Curso JAVA - JPA - Aula: Relacionamento Um para Um.&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Curso JAVA - JPA - Aula: Relacionamento Um para Um.&#10;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1209,14 +1225,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/util/List.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/fabricante/PesquisaFabricantes.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="99" selection-start-line="22" selection-start-column="99" selection-end-line="22" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/modeloCarro/PesquisaModeloCarro.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1469,6 +1477,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1477,13 +1486,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/template/LayoutPadrao.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1330">
-          <caret line="43" column="92" selection-start-line="43" selection-start-column="92" selection-end-line="43" selection-end-column="92" />
         </state>
       </provider>
     </entry>
@@ -1542,36 +1544,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/modelo/Aluguel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1805#1806#0" expanded="true" />
-            <element signature="e#1902#1903#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/modelo/Carro.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="74" column="37" selection-start-line="74" selection-start-column="37" selection-end-line="74" selection-end-column="37" />
-          <folding>
-            <element signature="e#1690#1691#0" expanded="true" />
-            <element signature="e#1726#1727#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/dao/ApoliceSeguroDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
-            <element signature="e#592#593#0" expanded="true" />
-            <element signature="e#673#674#0" expanded="true" />
+            <element signature="e#594#595#0" expanded="false" />
+            <element signature="e#675#676#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1589,7 +1568,7 @@
         <state relative-caret-position="520">
           <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding>
-            <element signature="e#1526#1527#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1607,7 +1586,7 @@
         <state relative-caret-position="323">
           <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1617,8 +1596,50 @@
         <state relative-caret-position="442">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/modelo/Aluguel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/modelo/Carro.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="74" column="59" selection-start-line="74" selection-start-column="59" selection-end-line="74" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/carro/PesquisaCarros.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/template/LayoutPadrao.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="38" column="84" selection-start-line="38" selection-start-column="84" selection-end-line="38" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/controller/PesquisaCarroBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
