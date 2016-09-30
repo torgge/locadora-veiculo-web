@@ -7,7 +7,7 @@
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@oracle-pc:1521:XE"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@bonespirito-pc:1521:XE"/>
 			<property name="javax.persistence.jdbc.user" value="locadora" />
 			<property name="javax.persistence.jdbc.password" value="superlocadora" />
 

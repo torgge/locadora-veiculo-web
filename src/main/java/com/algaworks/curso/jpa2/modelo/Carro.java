@@ -18,7 +18,10 @@ public class Carro {
 	@ManyToOne
 	@JoinColumn(name = "codigo_modelo")
 	private ModeloCarro modelo;
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "carro_acessorio"
+			, joinColumns = @JoinColumn(name = "codigo_carro")
+			, inverseJoinColumns = @JoinColumn(name = "codigo_acessorio"))
 	private List<Acessorio> acessorios;
 	@OneToMany(mappedBy = "carro")
 	private List<Aluguel> alugueis;
