@@ -15,6 +15,8 @@ public class ModeloCarro {
     private String descricao;
     @ManyToOne
     private Fabricante fabricante;
+    @Enumerated(EnumType.STRING)
+    private Categoria categoria;
 
     public Long getCodigo() {
         return codigo;
@@ -38,6 +40,14 @@ public class ModeloCarro {
 
     public void setFabricante(Fabricante fabricante) {
         this.fabricante = fabricante;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 
     @Override
