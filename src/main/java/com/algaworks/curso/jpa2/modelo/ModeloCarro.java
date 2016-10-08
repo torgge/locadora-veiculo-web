@@ -1,6 +1,7 @@
 package com.algaworks.curso.jpa2.modelo;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 /**
  * Created by George on 22/08/2016.
@@ -54,15 +55,15 @@ public class ModeloCarro {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof ModeloCarro)) return false;
-
         ModeloCarro that = (ModeloCarro) o;
-
-        return getCodigo().equals(that.getCodigo());
-
+        return Objects.equals(getCodigo(), that.getCodigo()) &&
+                Objects.equals(getDescricao(), that.getDescricao()) &&
+                Objects.equals(getFabricante(), that.getFabricante()) &&
+                getCategoria() == that.getCategoria();
     }
 
     @Override
     public int hashCode() {
-        return getCodigo().hashCode();
+        return Objects.hash(getCodigo(), getDescricao(), getFabricante(), getCategoria());
     }
 }

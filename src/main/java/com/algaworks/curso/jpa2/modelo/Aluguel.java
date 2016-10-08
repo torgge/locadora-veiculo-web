@@ -2,6 +2,8 @@ package com.algaworks.curso.jpa2.modelo;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Objects;
 
 /**
@@ -21,6 +23,12 @@ public class Aluguel {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "codigo_apolice_seguro")
     private ApoliceSeguro apoliceSeguro;
+    @Temporal(TemporalType.DATE)
+    private Calendar dataPedido;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date dataDevolucao;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date dataEntrega;
 
     public Long getCodigo() {
         return codigo;
@@ -54,19 +62,41 @@ public class Aluguel {
         this.apoliceSeguro = apoliceSeguro;
     }
 
+    public Calendar getDataPedido() {
+        return dataPedido;
+    }
+
+    public void setDataPedido(Calendar dataPedido) {
+        this.dataPedido = dataPedido;
+    }
+
+    public Date getDataDevolucao() {
+        return dataDevolucao;
+    }
+
+    public void setDataDevolucao(Date dataDevolucao) {
+        this.dataDevolucao = dataDevolucao;
+    }
+
+    public Date getDataEntrega() {
+        return dataEntrega;
+    }
+
+    public void setDataEntrega(Date dataEntrega) {
+        this.dataEntrega = dataEntrega;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Aluguel)) return false;
         Aluguel aluguel = (Aluguel) o;
         return Objects.equals(getCodigo(), aluguel.getCodigo()) &&
-                Objects.equals(getValorTotal(), aluguel.getValorTotal()) &&
-                Objects.equals(getCarro(), aluguel.getCarro()) &&
-                Objects.equals(getApoliceSeguro(), aluguel.getApoliceSeguro());
+                Objects.equals(getCarro(), aluguel.getCarro());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getCodigo(), getValorTotal(), getCarro(), getApoliceSeguro());
+        return Objects.hash(getCodigo(), getCarro());
     }
 }

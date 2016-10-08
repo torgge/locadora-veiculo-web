@@ -9,10 +9,10 @@ import java.io.Serializable;
 
 public class CadastroAcessorioService implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	
-	@Inject
-	private AcessorioDAO acessorioDAO;
+    //private static final long serialVersionUID = 1L;
+
+    @Inject
+    private AcessorioDAO acessorioDAO;
 	
 	@Transactional
 	public void salvar(Acessorio acessorio) throws NegocioException {

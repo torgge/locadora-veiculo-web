@@ -3,6 +3,7 @@ package com.algaworks.curso.jpa2.modelo;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @SequenceGenerator(name = "SEQ_CARRO", sequenceName = "SEQ_CARRO", initialValue = 1)
@@ -87,15 +88,12 @@ public class Carro {
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (!(o instanceof Carro)) return false;
-
 		Carro carro = (Carro) o;
-
-		return getCodigo().equals(carro.getCodigo());
-
+		return Objects.equals(getCodigo(), carro.getCodigo());
 	}
 
 	@Override
 	public int hashCode() {
-		return getCodigo().hashCode();
+		return Objects.hash(getCodigo());
 	}
 }

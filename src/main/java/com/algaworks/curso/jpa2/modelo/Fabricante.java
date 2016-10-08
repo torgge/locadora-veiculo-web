@@ -1,6 +1,7 @@
 package com.algaworks.curso.jpa2.modelo;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 /**
  * Created by George on 08/08/2016.
@@ -33,15 +34,13 @@ public class Fabricante {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Fabricante)) return false;
-
         Fabricante that = (Fabricante) o;
-
-        return getCodigo().equals(that.getCodigo());
-
+        return Objects.equals(getCodigo(), that.getCodigo()) &&
+                Objects.equals(getNome(), that.getNome());
     }
 
     @Override
     public int hashCode() {
-        return getCodigo().hashCode();
+        return Objects.hash(getCodigo(), getNome());
     }
 }

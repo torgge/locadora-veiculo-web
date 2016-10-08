@@ -15,27 +15,27 @@ public class AcessorioDAO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Inject
-	private EntityManager manager;
-	
-	public Acessorio buscarPeloCodigo(Long codigo) {
-		return manager.find(Acessorio.class, codigo);
-	}
-	
-	public void salvar(Acessorio fabricante) {
-		manager.merge(fabricante);
-	}
+    private EntityManager em;
+
+    public Acessorio buscarPeloCodigo(Long codigo) {
+        return em.find(Acessorio.class, codigo);
+    }
+
+    public void salvar(Acessorio acessorio) {
+        em.merge(acessorio);
+    }
 
 	public List<Acessorio> buscarTodos() {
-		return manager.createQuery("from Acessorio").getResultList();
-	}
+        return em.createQuery("from Acessorio").getResultList();
+    }
 	
 	@Transactional
-	public void excluir(Acessorio fabricante) throws NegocioException {
-		fabricante = buscarPeloCodigo(fabricante.getCodigo());
-		try {
-			manager.remove(fabricante);
-			manager.flush();
-		} catch (PersistenceException e) {
+    public void excluir(Acessorio acessorio) throws NegocioException {
+        acessorio = buscarPeloCodigo(acessorio.getCodigo());
+        try {
+            em.remove(acessorio);
+            em.flush();
+        } catch (PersistenceException e) {
 			throw new NegocioException("Acessorio não pode ser excluído.");
 		}
 	}

@@ -1,6 +1,7 @@
 package com.algaworks.curso.jpa2.modelo;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @SequenceGenerator(name = "SEQ_ACESSORIO", sequenceName = "SEQ_ACESSORIO", initialValue = 1)
@@ -24,30 +25,17 @@ public class Acessorio {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	
+
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
-		return result;
-	}
-	
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Acessorio other = (Acessorio) obj;
-		if (codigo == null) {
-			if (other.codigo != null)
-				return false;
-		} else if (!codigo.equals(other.codigo))
-			return false;
-		return true;
-	}
-	
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Acessorio)) return false;
+        Acessorio acessorio = (Acessorio) o;
+        return Objects.equals(getCodigo(), acessorio.getCodigo());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getCodigo());
+    }
 }

@@ -9,7 +9,7 @@ import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
 
-@FacesConverter("acessorioConverter")
+@FacesConverter(forClass = Acessorio.class)
 public class AcessorioConverter implements Converter {
 
 	private AcessorioDAO acessorioDAO;

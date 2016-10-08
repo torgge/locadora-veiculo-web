@@ -43,8 +43,9 @@ public class PesquisaAcessorioBean implements Serializable {
 	public Acessorio getAcessorioSelecionado() {
 		return acessorioSelecionado;
 	}
-	public void setAcessorioSelecionado(Acessorio acessorioSelecionado) {
-		this.acessorioSelecionado = acessorioSelecionado;
+
+    public void setAcessorioSelecionado(Acessorio acessorioSelecionado) {
+        this.acessorioSelecionado = acessorioSelecionado;
 	}
 	
 	@PostConstruct
