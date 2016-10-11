@@ -29,7 +29,7 @@ public class NovoAluguelBean implements Serializable {
     private CadastroAluguelService cadastroAluguelService;
 
     @Inject
-    private CarroDAO carroDAO;
+    private CarroDAO motoristaDAO;
 
     public void salvar() {
         try {
@@ -46,7 +46,7 @@ public class NovoAluguelBean implements Serializable {
     public void inicializar() {
         this.limpar();
 
-        this.carros = this.carroDAO.buscarTodos();
+        this.carros = this.motoristaDAO.buscarTodos();
     }
 
     public void limpar() {

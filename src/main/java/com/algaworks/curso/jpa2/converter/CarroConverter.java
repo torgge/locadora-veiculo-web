@@ -12,10 +12,10 @@ import javax.faces.convert.FacesConverter;
 @FacesConverter(forClass = Carro.class)
 public class CarroConverter implements Converter {
 
-    private CarroDAO carroDAO;
+    private CarroDAO motoristaDAO;
 
     public CarroConverter() {
-        this.carroDAO = CDIServiceLocator.getBean(CarroDAO.class);
+        this.motoristaDAO = CDIServiceLocator.getBean(CarroDAO.class);
     }
 
     @Override
@@ -23,7 +23,7 @@ public class CarroConverter implements Converter {
         Carro retorno = null;
 
         if (value != null) {
-            retorno = this.carroDAO.buscarPeloCodigo(new Long(value));
+            retorno = this.motoristaDAO.buscarPeloCodigo(new Long(value));
         }
 
         return retorno;

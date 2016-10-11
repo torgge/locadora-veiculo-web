@@ -20,7 +20,7 @@ public class PesquisaCarroBean implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Inject
-    CarroDAO carroDAO;
+    CarroDAO motoristaDAO;
 
     private List<Carro> carros = new ArrayList<>();
 
@@ -32,7 +32,7 @@ public class PesquisaCarroBean implements Serializable {
 
     public void excluir() {
         try {
-            carroDAO.excluir(carroSelecionado);
+            motoristaDAO.excluir(carroSelecionado);
             this.carros.remove(carroSelecionado);
             FacesUtil.addSuccessMessage("Carro placa " + carroSelecionado.getPlaca() + " excluído com sucesso.");
         } catch (NegocioException e) {
@@ -49,13 +49,13 @@ public class PesquisaCarroBean implements Serializable {
     }
 
     public void buscarCarroComAcessorios() {
-        carroSelecionado = carroDAO.buscarCarroComACessorios(this.carroSelecionado.getCodigo());
+        carroSelecionado = motoristaDAO.buscarCarroComACessorios(this.carroSelecionado.getCodigo());
     }
 
 
     @PostConstruct
     public void inicializar() {
-        carros = carroDAO.buscarTodos();
+        carros = motoristaDAO.buscarTodos();
     }
 
 }
