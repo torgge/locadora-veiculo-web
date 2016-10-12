@@ -9,8 +9,8 @@ import java.util.Objects;
  */
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "TIPO_PESSOA", discriminatorType = DiscriminatorType.STRING)
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn(name = "TIPO_PESSOA", discriminatorType = DiscriminatorType.INTEGER)
 @SequenceGenerator(name = "SEQ_PESSOA", sequenceName = "SEQ_PESSOA", initialValue = 1)
 public abstract class Pessoa {
 
