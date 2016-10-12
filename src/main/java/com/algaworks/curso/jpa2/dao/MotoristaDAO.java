@@ -31,10 +31,10 @@ public class MotoristaDAO implements Serializable {
     }
 
     @Transactional
-    public void excluir(Motorista Motorista) throws NegocioException {
-        Motorista = buscarPeloCodigo(Motorista.getCodigo());
+    public void excluir(Motorista motorista) throws NegocioException {
+        motorista = buscarPeloCodigo(motorista.getCodigo());
         try {
-            manager.remove(Motorista);
+            manager.remove(motorista);
             manager.flush();
         } catch (PersistenceException e) {
             throw new NegocioException("Motorista não pode ser excluído.");
