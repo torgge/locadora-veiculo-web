@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5260edf1-70b1-49f6-837a-c0cb704e3595" name="Default" comment="Curso JAVA - JPA - Mapeando Herança com JOINED. v5.5&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/controller/CadastroFuncionarioBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/controller/PesquisaFuncionarioBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/converter/FuncionarioConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/dao/FuncionarioDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/modelo/Funcionario.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/service/CadastroFuncionarioService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/funcionario/CadastroFuncionario.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/funcionario/PesquisaFuncionarios.xhtml" />
+    <list default="true" id="5260edf1-70b1-49f6-837a-c0cb704e3595" name="Default" comment="Curso JAVA - JPA - Cadastro de Funcionários. v5.6&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/locadora-veiculo-web.war" afterPath="$PROJECT_DIR$/target/locadora-veiculo-web.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/dao/MotoristaDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/algaworks/curso/jpa2/dao/MotoristaDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/template/LayoutPadrao.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/template/LayoutPadrao.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/locadora-veiculo-web/WEB-INF/template/LayoutPadrao.xhtml" afterPath="$PROJECT_DIR$/target/locadora-veiculo-web/WEB-INF/template/LayoutPadrao.xhtml" />
     </list>
     <ignored path="locadora-veiculo-web.iws" />
@@ -1355,7 +1344,7 @@
       <workItem from="1475889483068" duration="2933000" />
       <workItem from="1476201799284" duration="2073000" />
       <workItem from="1476203909928" duration="961000" />
-      <workItem from="1476288184705" duration="4018000" />
+      <workItem from="1476288184705" duration="4060000" />
     </task>
     <task id="LOCAL-00001" summary="Curso JAVA - JPA">
       <created>1470874781013</created>
@@ -1434,11 +1423,18 @@
       <option name="project" value="LOCAL" />
       <updated>1476288835725</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Curso JAVA - JPA - Cadastro de Funcionários. v5.6&#10;">
+      <created>1476292452179</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1476292452179</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91845000" />
+    <option name="totallyTimeSpent" value="91887000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
@@ -1462,11 +1458,11 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0943194" sideWeight="0.49733475" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36655948" sideWeight="0.49895832" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6216506" sideWeight="0.49733475" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36655948" sideWeight="0.49895832" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24160346" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35394457" sideWeight="0.50595886" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20735608" sideWeight="0.49404117" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20735608" sideWeight="0.49404117" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23901394" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.503792" order="6" side_tool="true" content_ui="tabs" />
@@ -1519,7 +1515,8 @@
     <MESSAGE value="Curso JAVA - JPA - Carregamento Lazy e Higer.&#10;" />
     <MESSAGE value="Curso JAVA - JPA - Mapeando Herança com tabela única. v5.4&#10;" />
     <MESSAGE value="Curso JAVA - JPA - Mapeando Herança com JOINED. v5.5&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Curso JAVA - JPA - Mapeando Herança com JOINED. v5.5&#10;" />
+    <MESSAGE value="Curso JAVA - JPA - Cadastro de Funcionários. v5.6&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Curso JAVA - JPA - Cadastro de Funcionários. v5.6&#10;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
