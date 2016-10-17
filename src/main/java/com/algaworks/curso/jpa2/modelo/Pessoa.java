@@ -22,6 +22,8 @@ public abstract class Pessoa {
     @Column(name = "data_nascimento")
     private Date dataNascimento;
     private String cpf;
+    @Enumerated(EnumType.STRING)
+    private Sexo sexo;
 
     public Long getCodigo() {
         return codigo;
@@ -53,6 +55,14 @@ public abstract class Pessoa {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public Sexo getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(Sexo sexo) {
+        this.sexo = sexo;
     }
 
     @Override
