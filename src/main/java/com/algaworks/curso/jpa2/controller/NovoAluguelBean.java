@@ -1,9 +1,11 @@
 package com.algaworks.curso.jpa2.controller;
 
 import com.algaworks.curso.jpa2.dao.CarroDAO;
+import com.algaworks.curso.jpa2.dao.MotoristaDAO;
 import com.algaworks.curso.jpa2.modelo.Aluguel;
 import com.algaworks.curso.jpa2.modelo.ApoliceSeguro;
 import com.algaworks.curso.jpa2.modelo.Carro;
+import com.algaworks.curso.jpa2.modelo.Motorista;
 import com.algaworks.curso.jpa2.service.CadastroAluguelService;
 import com.algaworks.curso.jpa2.service.NegocioException;
 import com.algaworks.curso.jpa2.util.jsf.FacesUtil;
@@ -25,11 +27,16 @@ public class NovoAluguelBean implements Serializable {
 
     private List<Carro> carros;
 
+    private List<Motorista> motoristas;
+
     @Inject
     private CadastroAluguelService cadastroAluguelService;
 
     @Inject
-    private CarroDAO motoristaDAO;
+    private CarroDAO carroDAO;
+
+    @Inject
+    private MotoristaDAO motoristaDAO;
 
     public void salvar() {
         try {
@@ -46,7 +53,8 @@ public class NovoAluguelBean implements Serializable {
     public void inicializar() {
         this.limpar();
 
-        this.carros = this.motoristaDAO.buscarTodos();
+        this.carros = this.carroDAO.buscarTodos();
+        this.motoristas = this.motoristaDAO.buscarTodos();
     }
 
     public void limpar() {
@@ -64,6 +72,10 @@ public class NovoAluguelBean implements Serializable {
 
     public List<Carro> getCarros() {
         return carros;
+    }
+
+    public List<Motorista> getMotoristas() {
+        return motoristas;
     }
 
 }

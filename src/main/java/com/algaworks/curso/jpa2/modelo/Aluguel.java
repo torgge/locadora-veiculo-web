@@ -6,9 +6,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Objects;
 
-/**
- * Created by torgg on 26/09/2016.
- */
 @Entity
 @SequenceGenerator(name = "SEQ_ALUGUEL", sequenceName = "SEQ_ALUGUEL", initialValue = 1)
 public class Aluguel {
@@ -29,6 +26,9 @@ public class Aluguel {
     private Date dataDevolucao;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataEntrega;
+    @ManyToOne
+    @JoinColumn(name = "codigo_motorista")
+    private Motorista motorista;
 
     public Long getCodigo() {
         return codigo;
@@ -86,17 +86,27 @@ public class Aluguel {
         this.dataEntrega = dataEntrega;
     }
 
+    public Motorista getMotorista() {
+        return motorista;
+    }
+
+    public void setMotorista(Motorista motorista) {
+        this.motorista = motorista;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Aluguel)) return false;
         Aluguel aluguel = (Aluguel) o;
         return Objects.equals(getCodigo(), aluguel.getCodigo()) &&
-                Objects.equals(getCarro(), aluguel.getCarro());
+                Objects.equals(getCarro(), aluguel.getCarro()) &&
+                Objects.equals(getApoliceSeguro(), aluguel.getApoliceSeguro()) &&
+                Objects.equals(getMotorista(), aluguel.getMotorista());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getCodigo(), getCarro());
+        return Objects.hash(getCodigo(), getCarro(), getApoliceSeguro(), getMotorista());
     }
 }

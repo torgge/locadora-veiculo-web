@@ -17,7 +17,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="" />
         <datasource-mapping>
-          <factory-entry name="locadoraVeiculoPU" />
+          <factory-entry name="locadoraVeiculoPU" value="a24496e8-4db0-44fd-a7b1-81a2e65ef355" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>

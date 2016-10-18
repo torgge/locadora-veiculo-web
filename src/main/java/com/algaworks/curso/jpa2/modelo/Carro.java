@@ -89,11 +89,18 @@ public class Carro {
 		if (this == o) return true;
 		if (!(o instanceof Carro)) return false;
 		Carro carro = (Carro) o;
-		return Objects.equals(getCodigo(), carro.getCodigo());
+		return Objects.equals(getCodigo(), carro.getCodigo()) &&
+				Objects.equals(getPlaca(), carro.getPlaca()) &&
+				Objects.equals(getCor(), carro.getCor()) &&
+				Objects.equals(getChassi(), carro.getChassi()) &&
+				Objects.equals(getValorDiaria(), carro.getValorDiaria()) &&
+				Objects.equals(getModelo(), carro.getModelo()) &&
+				Objects.equals(getAcessorios(), carro.getAcessorios()) &&
+				Objects.equals(getAlugueis(), carro.getAlugueis());
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(getCodigo());
+		return Objects.hash(getCodigo(), getPlaca(), getCor(), getChassi(), getValorDiaria(), getModelo(), getAcessorios(), getAlugueis());
 	}
 }
