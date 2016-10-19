@@ -60,6 +60,7 @@ public class NovoAluguelBean implements Serializable {
     public void limpar() {
         this.aluguel = new Aluguel();
         this.aluguel.setApoliceSeguro(new ApoliceSeguro());
+        this.aluguel.setCarro(new Carro());
     }
 
     public Aluguel getAluguel() {

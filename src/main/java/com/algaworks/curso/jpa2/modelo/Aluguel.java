@@ -4,10 +4,9 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Objects;
 
 @Entity
-@SequenceGenerator(name = "SEQ_ALUGUEL", sequenceName = "SEQ_ALUGUEL", initialValue = 1)
+@SequenceGenerator(name = "SEQ_ALUGUEL", sequenceName = "SEQ_ALUGUEL")
 public class Aluguel {
 
     @Id
@@ -95,18 +94,27 @@ public class Aluguel {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Aluguel)) return false;
-        Aluguel aluguel = (Aluguel) o;
-        return Objects.equals(getCodigo(), aluguel.getCodigo()) &&
-                Objects.equals(getCarro(), aluguel.getCarro()) &&
-                Objects.equals(getApoliceSeguro(), aluguel.getApoliceSeguro()) &&
-                Objects.equals(getMotorista(), aluguel.getMotorista());
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
+        return result;
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(getCodigo(), getCarro(), getApoliceSeguro(), getMotorista());
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Aluguel other = (Aluguel) obj;
+        if (codigo == null) {
+            if (other.codigo != null)
+                return false;
+        } else if (!codigo.equals(other.codigo))
+            return false;
+        return true;
     }
 }

@@ -3,10 +3,9 @@ package com.algaworks.curso.jpa2.modelo;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.List;
-import java.util.Objects;
 
 @Entity
-@SequenceGenerator(name = "SEQ_CARRO", sequenceName = "SEQ_CARRO", initialValue = 1)
+@SequenceGenerator(name = "SEQ_CARRO", sequenceName = "SEQ_CARRO")
 public class Carro {
 
 	@Id
@@ -85,22 +84,27 @@ public class Carro {
 	}
 
 	@Override
-	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (!(o instanceof Carro)) return false;
-		Carro carro = (Carro) o;
-		return Objects.equals(getCodigo(), carro.getCodigo()) &&
-				Objects.equals(getPlaca(), carro.getPlaca()) &&
-				Objects.equals(getCor(), carro.getCor()) &&
-				Objects.equals(getChassi(), carro.getChassi()) &&
-				Objects.equals(getValorDiaria(), carro.getValorDiaria()) &&
-				Objects.equals(getModelo(), carro.getModelo()) &&
-				Objects.equals(getAcessorios(), carro.getAcessorios()) &&
-				Objects.equals(getAlugueis(), carro.getAlugueis());
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
+		return result;
 	}
 
 	@Override
-	public int hashCode() {
-		return Objects.hash(getCodigo(), getPlaca(), getCor(), getChassi(), getValorDiaria(), getModelo(), getAcessorios(), getAlugueis());
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Carro other = (Carro) obj;
+		if (codigo == null) {
+			if (other.codigo != null)
+				return false;
+		} else if (!codigo.equals(other.codigo))
+			return false;
+		return true;
 	}
 }
