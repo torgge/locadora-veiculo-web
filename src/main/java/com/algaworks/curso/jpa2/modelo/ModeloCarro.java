@@ -15,6 +15,7 @@ public class ModeloCarro {
     private Long codigo;
     private String descricao;
     @ManyToOne
+    @JoinColumn(name = "codigo_fabricante")
     private Fabricante fabricante;
     @Enumerated(EnumType.STRING)
     private Categoria categoria;
